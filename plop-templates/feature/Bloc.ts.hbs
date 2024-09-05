@@ -1,0 +1,17 @@
+import { Bloc } from '@/common/bloc/Bloc';
+import  {{pascalCase name}}State  from './{{pascalCase name}}State';
+
+export default class {{pascalCase name}}Bloc extends Bloc<{{pascalCase name}}State> {
+  constructor() {
+    super({
+     isLoading:false
+    });
+  }
+
+  showLoader(show: boolean) {
+    this.emit({
+      ...this.state,
+      isLoading: show,
+    });
+  }
+}

@@ -1,0 +1,48 @@
+import { debugPrint } from '@/common/domain/constants/debugPrint';
+import useForm from '@/common/presentation/hooks/useForm';
+import React from 'react'
+
+export interface {{pascalCase name}}FormValues {
+    name:string;
+    age:number;
+}
+
+export const {{pascalCase name}}Form = () => {
+    const { values, handleChange, resetForm } = useForm<{{pascalCase name}}FormValues>({
+      name: '',
+      age: 0,
+    });
+  
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+      debugPrint('Form Values:', values);
+      resetForm();
+    };
+  
+    return (
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={values.name}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="age">Age</label>
+          <input
+            type="age"
+            id="age"
+            name="age"
+            value={values.age}
+            onChange={handleChange}
+          />
+        </div>
+  
+        <button type="submit">Enviar</button>
+      </form>
+    );
+}

@@ -1,0 +1,12 @@
+import React, { ReactNode } from 'react';
+import { BlocProvider } from '@/common/bloc/BlocProvider';
+import {{pascalCase name}}Bloc from './{{pascalCase name}}Bloc';
+
+interface {{pascalCase name}}ProviderProps {
+  children: ReactNode;
+}
+
+export const {{pascalCase name}}Provider = (props: {{pascalCase name}}ProviderProps) => {
+    const bloc = new {{pascalCase name}}Bloc();
+    return <BlocProvider bloc={bloc}> {props.children} </BlocProvider>;
+}

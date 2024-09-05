@@ -1,3 +1,29 @@
+## PLOP
+
+```bash
+# Para crear una feature base con sus blocs
+npx plop feature
+
+# Para crear un formulario en el directorio src/temp/forms
+npx plop form
+
+#Para crear la page de las rutas
+npx plop page
+```
+
+## VSCODE SNIPPET
+
+Los snippets disponibles se encuentran en el archivo `.vscode/custom-snippets.code-snippets`
+
+Los snippets disponibles ahora son:
+
+### `blocb`-> Crea un BlocBuilder
+
+### `rafp` -> Crea un React Component con la directriz 'use client;' requerida por Nextjs
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,3 +60,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
